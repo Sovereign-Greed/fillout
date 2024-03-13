@@ -3,6 +3,10 @@ const app = express();
 require('dotenv').config();
 const route = require('./route');
 
+app.use(express.urlencoded({
+    extended: true
+}));
+
 app.use(express.json());
 app.use('/', route);
 
