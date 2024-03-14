@@ -1,0 +1,104 @@
+[debug] [2024-03-14T00:16:12.530Z] ----------------------------------------------------------------------
+[debug] [2024-03-14T00:16:12.531Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Raza\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only functions:api
+[debug] [2024-03-14T00:16:12.531Z] CLI Version:   11.18.0
+[debug] [2024-03-14T00:16:12.532Z] Platform:      win32
+[debug] [2024-03-14T00:16:12.532Z] Node Version:  v18.0.0
+[debug] [2024-03-14T00:16:12.533Z] Time:          Wed Mar 13 2024 20:16:12 GMT-0400 (Eastern Daylight Time)
+[debug] [2024-03-14T00:16:12.533Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-03-14T00:16:12.581Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-03-14T00:16:12.581Z] > authorizing via signed-in user (mraza081593@gmail.com)
+[debug] [2024-03-14T00:16:12.581Z] [iam] checking project filloutapp-73194 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2024-03-14T00:16:12.583Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/filloutapp-73194:testIamPermissions [none]
+[debug] [2024-03-14T00:16:12.583Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/filloutapp-73194:testIamPermissions x-goog-quota-user=projects/filloutapp-73194
+[debug] [2024-03-14T00:16:12.583Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/filloutapp-73194:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2024-03-14T00:16:12.869Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/filloutapp-73194:testIamPermissions 200
+[debug] [2024-03-14T00:16:12.870Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/filloutapp-73194:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2024-03-14T00:16:12.870Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/filloutapp-73194/serviceAccounts/filloutapp-73194@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2024-03-14T00:16:12.870Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/filloutapp-73194/serviceAccounts/filloutapp-73194@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2024-03-14T00:16:13.063Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/filloutapp-73194/serviceAccounts/filloutapp-73194@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2024-03-14T00:16:13.063Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/filloutapp-73194/serviceAccounts/filloutapp-73194@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'filloutapp-73194'...
+[info] 
+[info] i  deploying functions 
+[debug] [2024-03-14T00:16:13.065Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/filloutapp-73194 [none]
+[debug] [2024-03-14T00:16:13.312Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/filloutapp-73194 200
+[debug] [2024-03-14T00:16:13.312Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/filloutapp-73194 {"projectId":"filloutapp-73194","projectNumber":"770338785158","displayName":"filloutapp","name":"projects/filloutapp-73194","resources":{"hostingSite":"filloutapp-73194"},"state":"ACTIVE","etag":"1_12562f4f-1fa4-4ed4-9865-18a5e396f06e"}
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2024-03-14T00:16:13.314Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/filloutapp-73194/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-03-14T00:16:13.314Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/filloutapp-73194/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/filloutapp-73194
+[debug] [2024-03-14T00:16:13.315Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/filloutapp-73194/services/runtimeconfig.googleapis.com [none]
+[debug] [2024-03-14T00:16:13.315Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/filloutapp-73194/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/filloutapp-73194
+[debug] [2024-03-14T00:16:13.316Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/filloutapp-73194/services/cloudbuild.googleapis.com [none]
+[debug] [2024-03-14T00:16:13.316Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/filloutapp-73194/services/cloudbuild.googleapis.com x-goog-quota-user=projects/filloutapp-73194
+[debug] [2024-03-14T00:16:13.318Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/filloutapp-73194/services/artifactregistry.googleapis.com [none]
+[debug] [2024-03-14T00:16:13.318Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/filloutapp-73194/services/artifactregistry.googleapis.com x-goog-quota-user=projects/filloutapp-73194
+[debug] [2024-03-14T00:16:13.664Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/filloutapp-73194/services/runtimeconfig.googleapis.com 200
+[debug] [2024-03-14T00:16:13.665Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/filloutapp-73194/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2024-03-14T00:16:13.719Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/filloutapp-73194/services/artifactregistry.googleapis.com 200
+[debug] [2024-03-14T00:16:13.719Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/filloutapp-73194/services/artifactregistry.googleapis.com [omitted]
+[info] +  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2024-03-14T00:16:13.730Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/filloutapp-73194/services/cloudbuild.googleapis.com 200
+[debug] [2024-03-14T00:16:13.730Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/filloutapp-73194/services/cloudbuild.googleapis.com [omitted]
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2024-03-14T00:16:13.789Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/filloutapp-73194/services/cloudfunctions.googleapis.com 200
+[debug] [2024-03-14T00:16:13.789Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/filloutapp-73194/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2024-03-14T00:16:13.789Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/filloutapp-73194/adminSdkConfig [none]
+[debug] [2024-03-14T00:16:14.030Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/filloutapp-73194/adminSdkConfig 200
+[debug] [2024-03-14T00:16:14.030Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/filloutapp-73194/adminSdkConfig {"projectId":"filloutapp-73194","storageBucket":"filloutapp-73194.appspot.com"}
+[debug] [2024-03-14T00:16:14.031Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/filloutapp-73194/configs [none]
+[debug] [2024-03-14T00:16:14.181Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/filloutapp-73194/configs 200
+[debug] [2024-03-14T00:16:14.181Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/filloutapp-73194/configs {"configs":[{"name":"projects/filloutapp-73194/configs/config"}]}
+[debug] [2024-03-14T00:16:14.181Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/filloutapp-73194/configs/config/variables [none]
+[debug] [2024-03-14T00:16:14.325Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/filloutapp-73194/configs/config/variables 200
+[debug] [2024-03-14T00:16:14.325Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/filloutapp-73194/configs/config/variables {"variables":[{"name":"projects/filloutapp-73194/configs/config/variables/port","updateTime":"2024-03-14T00:06:41.562751891Z"}]}
+[debug] [2024-03-14T00:16:14.325Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/filloutapp-73194/configs/config/variables/port [none]
+[debug] [2024-03-14T00:16:14.433Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/filloutapp-73194/configs/config/variables/port 200
+[debug] [2024-03-14T00:16:14.433Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/filloutapp-73194/configs/config/variables/port {"name":"projects/filloutapp-73194/configs/config/variables/port","updateTime":"2024-03-14T00:06:41.562751891Z","text":"3010"}
+[info] i  functions: preparing codebase default for deployment 
+[debug] [2024-03-14T00:16:14.435Z] Validating nodejs source
+[debug] [2024-03-14T00:16:17.178Z] > [functions] package.json contents: {
+  "name": "fillout",
+  "version": "1.0.0",
+  "description": "fillout api test",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js",
+    "deploy": "firebase deploy --only functions:api"
+  },
+  "author": "raza",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.7",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.3",
+    "firebase-admin": "^12.0.0",
+    "firebase-functions": "^4.8.0"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.23.10",
+    "eslint": "^8.57.0"
+  }
+}
+[debug] [2024-03-14T00:16:17.178Z] Building nodejs source
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-03-14T00:16:17.180Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-03-14T00:16:18.621Z] Serving at port 9005
+
+[debug] [2024-03-14T00:16:19.429Z] FetchError: request to http://localhost:9005/__/quitquitquit failed, reason: connect ECONNREFUSED ::1:9005
+    at ClientRequest.<anonymous> (C:\Users\Raza\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\node-fetch\lib\index.js:1491:11)
+    at ClientRequest.emit (node:events:527:28)
+    at ClientRequest.emit (node:domain:475:12)
+    at Socket.socketErrorListener (node:_http_client:454:9)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+[error] 
+[error] Error: An unexpected error has occurred.
