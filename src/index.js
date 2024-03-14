@@ -12,8 +12,8 @@ app.use(express.json());
 app.use('/', route);
 
 // Start the server
-app.listen(process.env.PORT || 3010, () => {
-    console.log(`Server is running on port ${process.env.PORT || 3010}`);
+app.listen(3010, () => {
+    console.log(`Server is running on port ${3010}`);
 });
 
 exports.api = functions.https.onRequest(app);
