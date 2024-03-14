@@ -8,7 +8,7 @@ router.get('/health', async(req, res) => {
 
 router.get('/:formId/filteredResponses', async (req, res) => {
     const formId = req.params.formId;
-    const apiKey = process.env.API_KEY;
+    const apiKey = "sk_prod_TfMbARhdgues5AuIosvvdAC9WsA5kXiZlW8HZPaRDlIbCpSpLsXBeZO7dCVZQwHAY3P4VSBPiiC33poZ1tdUj2ljOzdTCCOSpUZ_3912";
 
     const filters = req.query;
 
